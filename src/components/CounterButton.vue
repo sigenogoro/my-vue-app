@@ -7,7 +7,7 @@ interface Props {
 }
 
 const emit = defineEmits<{
-    (e: `click`): void // クリックイベント
+    (e: 'click'): void // クリックイベント
 }>()
 
 // definePropsは、受け取るコンポーネントを定義する
@@ -15,7 +15,7 @@ const emit = defineEmits<{
 const props = defineProps<Props>()
 
 function handleClick() {
-    emit(`click`)
+    emit('click')
 }
 
 </script>
