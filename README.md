@@ -8,3 +8,17 @@ Learn more about the recommended Project Setup and IDE Support in the [Vue Docs 
 # やりたいこと
 - Vue3 + TypeScript + Viteを利用して Todoアプリケーションを開発すること
 
+# 各ディレクトリについて
+
+my-vue-app/
+├── node_modules/    # 依存パッケージ
+├── public/          # 静的ファイル
+├── src/             # ソースコード
+│   ├── assets/      # 画像などの静的リソース
+│   ├── components/  # Vueコンポーネント
+│   ├── App.vue      # メインコンポーネント
+│   └── main.ts      # エントリーポイント
+├── index.html       # HTMLエントリーポイント
+├── package.json     # プロジェクト設定
+├── tsconfig.json    # TypeScript設定
+└── vite.config.ts   # Vite設定

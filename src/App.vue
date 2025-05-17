@@ -7,6 +7,9 @@ lang="ts"にすることで TypeScirptの利用することができます
 -->
 <script setup lang="ts">
 import { ref } from 'vue'
+import CounterButton from './components/CounterButton.vue'
+import PropsSample from './components/PropsSample.vue'
+import HelloButton from './components/HelloButton.vue'
 
 const count = ref(0) 
 
@@ -18,18 +21,27 @@ function increment() {
 function decrement() {
   count.value--
 }
+
+function handleSubmit() {
+  console.log('② 親: submit を受け取った！')
+  alert("子コンポーネントから submitイベントを受け取りました")
+}
 </script>
 
 <template>
+  <PropsSample name="もげもげ" />
   <div class="counter-app">
     <h1>シンプルカウント</h1>
     <div class="counter">
-      <button @click="decrement">減少</button>
+      <CounterButton label="-" @click="decrement" />
       <span>{{ count }}</span>
-      <button @click="increment">追加</button>
+      <CounterButton label="+" @click="increment" />
     </div>
 
     <p>現在のカウント: {{ count }}</p>
+  </div>
+  <div>
+    <h1><HelloButton @click="handleSubmit" /></h1>
   </div>
 </template>
 
@@ -48,13 +60,6 @@ function decrement() {
   justify-content: center;
   align-items: center;
   margin: 20px 0;
-}
-
-button {
-  font-size: 20px;
-  padding: 10px 20px;
-  margin: 0 10px;
-  cursor: pointer;
 }
 
 span {
