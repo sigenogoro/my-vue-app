@@ -1,10 +1,10 @@
 <template>
     <div>
-        <step2 />
+        <step3 />
     </div>
 </template>
 
 <script setup lang="ts">
-import step2 from './components/step2.vue'
+import step3 from './components/step3.vue'
 
 </script>
