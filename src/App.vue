@@ -1,8 +1,10 @@
 <template>
-  <div>
-    <h1>Vue.js Hello World</h1>
-  </div>
+    <div>
+        <step5 />
+    </div>
 </template>
 
 <script setup lang="ts">
+import step5 from "./components/step5.vue"
+
 </script>
