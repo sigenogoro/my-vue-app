@@ -1,10 +1,10 @@
 <template>
     <div>
-        <step6 />
+        <step7 />
     </div>
 </template>
 
 <script setup lang="ts">
-import step6 from "./components/props/step6.vue"
+import step7 from "./components/emit/step7.vue"
 
 </script>
