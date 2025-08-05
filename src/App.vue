@@ -1,8 +1,10 @@
 <template>
-  <div>
-    <h1>Vue.js Hello World</h1>
-  </div>
+    <div>
+        <step7 />
+    </div>
 </template>
 
 <script setup lang="ts">
+import step7 from "./components/emit/step7.vue"
+
 </script>
