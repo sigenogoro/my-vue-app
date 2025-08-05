@@ -1,8 +1,3 @@
-<script setup lang="ts">
-import Step7Child from './step7-child.vue';
-
-</script>
-
 <template>
     <div>
         <h1>Vue3学習 - Step7: emit</h1>
@@ -15,8 +10,10 @@ import Step7Child from './step7-child.vue';
             :name="user.name" 
             :age="user.age"
             @delete="deleteUser(index)"
-            @age-up="updateUserAge(index, $event)"
+            @age-update="updateUserAge(index, $event)"
         />
+
+        <!-- $event: 子から送られてきたデータを表す変数、一つしか受け取ることができない -->
         
         <hr>
         <button @click="addUser" style="background: green; color: white; padding: 10px;">
@@ -27,11 +24,11 @@ import Step7Child from './step7-child.vue';
 
 
 <script setup lang="ts">
-import { reactive } from "vue"
+import { reactive } from 'vue'
 import Step7Child from './step7-child.vue'
 
 interface User {
-    name: string,
+    name: string
     age: number
 }
 

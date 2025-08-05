@@ -32,7 +32,7 @@ interface Props {
 
 interface Emits {
     delete: [],
-    ageUp: [newAge: number]
+    ageUpdate: [newAge: number]
 }
 
 const props = defineProps<Props>()
@@ -44,7 +44,7 @@ const handleDelete = () => {
 
 const handleAgeUp = () => {
     const newAge = props.age + 1
-    emit("ageUp", newAge)
+    emit("ageUpdate", newAge)
 }
 
 
