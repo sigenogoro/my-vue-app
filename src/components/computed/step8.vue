@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2>computed 型付け（10分学習）</h2>
+        <h2>computed 型付け</h2>
         <div style="border: 1px solid blue; padding: 10px; margin: 5px;">
             <h3>1. 自動型推論</h3>
             <p>数値: {{ count }} → 2倍: {{ doubleCount }}</p>
@@ -22,14 +22,14 @@
 </template>
 
 <script setup lang="ts">
-import { reactive, computed } from 'vue'
+import { reactive, computed, ref } from 'vue'
 
 // 1, 自動型推論
-const count = 0
-const doubleCount = computed(() => count * 2)
+const count = ref(0)
+const doubleCount = computed(() => count.value * 2)
 
 const message = computed<string>(() => {
-    return `現在のカウント: ${count}`
+    return `現在のカウント: ${count.value}`
 })
 
 interface Products {
